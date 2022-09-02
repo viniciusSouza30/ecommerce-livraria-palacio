@@ -1,0 +1,289 @@
+:root {
+    --vermelho: #8C031C;
+    --azul: #0468bf;
+    --amarelo: #f2e205;
+    --marrom-claro: #d9a441;
+    --marrom-escuro: #593414;
+    --vermelho-transparente: #8c031c3b;
+    --preto: black;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.navCabecalho {
+    background-color: var(--vermelho);
+}
+
+.logoLivraria{
+    cursor: pointer;
+}
+
+.opcoesCabecalho {
+    align-items: center;
+    padding-left: 0px;
+    margin: 0px;
+    justify-content: space-between;
+}
+
+
+.opcoesCabecalho,
+.opcoesCategorias {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.opcoesCategorias{
+    justify-content: space-between;
+}
+
+.catg>a{
+    color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .barraPesquisa,
+    .linkLocalizacao {
+        display: none;
+    }
+    .banner {
+        height: 10vh;
+    }
+    .bannerFoto {
+        display: none;
+    }
+}
+
+.opcoesCabecalho>li>a,
+.opcoesCategorias>li>a {
+    text-decoration: none;
+}
+
+.itemOpcoesCabecalho {
+    padding-left: 20px;
+}
+
+hr {
+    margin: 0px 0px 0px 0px !important;
+    border-top: 6px solid white !important;
+    opacity: 100 !important;
+}
+
+aside {
+    padding-bottom: 10px;
+}
+
+.fotoLivro {
+    width: 40%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.livros {
+    background: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.carLivros {
+    background: #FFFFFF;
+    border: 2px solid #D9D9D9;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 10px;
+    display: grid;
+grid-template-columns: 28vh repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+}
+
+.fotoLivroCar {
+    width: 25vh;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.textoLivroCar{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+.textoLivrosCarDois{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.qtdCar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: end; */
+}
+
+.btnSaibaMaisCar, .btnMenosCar {
+    border: 3px solid var(--amarelo) !important;
+    border-radius: 50% !important;
+    width: 60px;
+    height: 60px;
+    align-self: center;
+    text-decoration: none;
+    padding: 5px 0px 5px 0px;
+    color: black;
+    transition: all 0.3s ease;
+    background-color: white;
+    
+    
+}
+
+.textQtd{
+    margin: 0px 15px 0px 15px;
+}
+
+.btnSaibaMaisCar:hover, .btnMenosCar:hover {
+    background-color: var(--amarelo);
+    color: black;
+    
+}
+
+.btnSaibaMais {
+    border: 3px solid var(--amarelo) !important;
+    border-radius: 14px !important;
+    width: 90%;
+    margin-bottom: 10px;
+    align-self: center;
+    text-decoration: none;
+    padding: 5px 0px 5px 0px;
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer
+}
+
+.btnSaibaMais:hover {
+    background-color: var(--amarelo);
+    color: black;
+}
+
+h5 {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+}
+
+.fotoBanner {
+    background-image: url('../img/meninas-lendo-livro.jpg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: -0px;
+    opacity: 70%;
+}
+
+.banner {
+    display: flex;
+    background-color: var(--azul);
+    height: 50vh;
+    padding-left: 0px !important;
+}
+
+.textoBanner {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textoBanner .textoLivro {
+    padding: 0px 5px 0px 5px;
+}
+
+.precoLivro {
+    font-size: large;
+    font-weight: bold;
+}
+
+.btnUsarCupom {
+    text-decoration: none;
+    border-radius: 14px;
+    background-color: var(--amarelo);
+    color: var(--preto);
+    padding: 10px;
+    width: 50%;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.25);
+    margin-top: 50px !important;
+}
+
+.btnUsarCupom:hover {
+    text-decoration: none;
+    border: 2px solid var(--amarelo);
+    border-radius: 14px;
+    background-color: var(--azul);
+    color: white;
+    padding: 10px;
+    /* bottom: 50px; */
+}
+
+.textoPorcentagem {
+    color: white;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.porcentagemDesconto {
+    font-weight: 900;
+}
+
+.cupom {
+    color: var(--marrom-claro);
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.row{
+    margin: 0px !important;
+}
+
+.tituloSec{
+    font-weight: 600;
+}
+
+.secPromocao, .secMaisPopulares{
+    margin-top: 35px;
+}
+
+.swiper{
+    width: 950px;
+}
+
+
+.swiper-button-next, .swiper-button-prev{
+    opacity: 0.7;
+    color: var(--vermelho) !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: var(--vermelho);
+}
